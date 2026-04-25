@@ -13,7 +13,7 @@ Jeu Memory développé en HTML, CSS et JavaScript.
 - Vérifier les paires
 
 ## Lien du projet
-(à ajouter après GitHub Pages)
+https://dhiyaa6.github.io/mohamed_dhiya_ben_nasser_memory_game/
 
 ## Difficultés
 ...
