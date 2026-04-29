@@ -2,17 +2,78 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Jeu Memory</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Jeu Memory — Dhiya</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<h1 class="title">
-  <span>M</span><span>E</span><span>M</span><span>O</span><span>R</span><span>Y</span>
-</h1>
-<h2>Score : <span id="score">0</span></h2>
-<h2>Coups : <span id="moves">0</span></h2>
-<button id="reset-btn" onclick="resetGame()">🔄 Rejouer</button>
-<div id="game-board"></div>
+
+<div class="particles" id="particles"></div>
+
+<div class="game-wrapper">
+
+
+  <header class="game-header">
+    <h1 class="title">
+      <span>M</span><span>E</span><span>M</span><span>O</span><span>R</span><span>Y</span>
+    </h1>
+  </header>
+
+  <div class="legend">
+    <span class="legend-item joker-legend">🃏 Joker · révèle tout</span>
+    <span class="legend-item hint-legend">🔍 Indice · révèle 1 paire</span>
+    <span class="legend-item shuffle-legend">🔀 Shuffle · mélange</span>
+  </div>
+
+  <div class="difficulty-bar">
+    <button class="diff-btn active" onclick="setDifficulty('easy', this)">😊 Facile</button>
+    <button class="diff-btn" onclick="setDifficulty('medium', this)">😐 Moyen</button>
+    <button class="diff-btn" onclick="setDifficulty('hard', this)">😈 Difficile</button>
+  </div>
+
+  <div class="hud-row">
+    <div class="stat-pill">⭐ <span id="score">0</span></div>
+    <div class="stat-pill">🎯 <span id="moves">0</span></div>
+    <div class="stat-pill">⏱ <span id="timer">00:00</span></div>
+    <div class="stat-pill gold">🏆 <span id="best-score">--</span></div>
+    <div class="hud-controls">
+      <button id="reset-btn" onclick="resetGame()" title="Rejouer">🔄</button>
+      <button id="music-btn" onclick="toggleMusic()" title="Musique">🔊</button>
+
+    </div>
+  </div>
+
+  <div id="special-notif" class="special-notif hidden"></div>
+
+  <div id="game-board" class="easy"></div>
+
+</div>
+
+<div id="win-screen" class="win-screen hidden">
+  <div class="win-card">
+    <div class="win-stars">★ ★ ★</div>
+    <div class="win-emoji">🎉</div>
+    <h2>Félicitations !</h2>
+    <div class="win-stats">
+      <div class="win-stat"><span>🎯</span><small>Coups</small><strong id="win-moves"></strong></div>
+      <div class="win-stat"><span>⏱</span><small>Temps</small><strong id="win-time"></strong></div>
+      <div class="win-stat"><span>⭐</span><small>Score</small><strong id="win-score"></strong></div>
+    </div>
+    <button class="reset-btn-win" onclick="resetGame()">🔄 Rejouer</button>
+  </div>
+</div>
+
+<footer>
+  <p>
+    <span class="footer-name">Mohamed Dhiya Ben Nasser</span>
+    &nbsp;·&nbsp; PI2 &nbsp;·&nbsp;
+    <a href="mailto:dhiya1234.live.fr4@gmail.com">dhiya1234.live.fr4@gmail.com</a>
+  </p>
+</footer>
+
 <script src="script.js"></script>
 </body>
 </html>
