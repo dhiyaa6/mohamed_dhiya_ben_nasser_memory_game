@@ -127,4 +127,4 @@ Durant ce projet, j'ai découvert et exploré plusieurs concepts nouveaux :
 
 ---
 
-*Projet PI2 — © 2025 Mohamed Dhiya Ben Nasser*
+*Projet PI2 — © 2026 Mohamed Dhiya Ben Nasser*
