@@ -8,7 +8,7 @@
 
 ## 📋 Description
 
-Jeu de mémoire interactif en HTML / CSS / JavaScript pur (Vanilla JS), sans framework. Le joueur retourne des paires de cartes en un minimum de coups et de temps. Version finale avec layout sans scroll, cartes spéciales, musique de fond personnalisée par niveau (fichiers audio de votre choix), et sons d'effets Web Audio.
+Jeu de mémoire interactif en HTML / CSS / JavaScript . Le joueur retourne des paires de cartes en un minimum de coups et de temps. Version finale avec layout sans scroll, cartes spéciales, musique de fond personnalisée par niveau (fichiers audio), et sons d'effets Web Audio.
 
 ---
 
@@ -18,7 +18,7 @@ Jeu de mémoire interactif en HTML / CSS / JavaScript pur (Vanilla JS), sans fra
 memory-game/
 │
 ├── index.html            # Structure HTML
-├── style.css             # Design professionnel (glassmorphism, no-scroll)
+├── style.css             # Design professionnel 
 ├── script.js             # Logique complète + sons d'effets Web Audio
 ├── README.md             # Ce fichier
 │
@@ -62,7 +62,7 @@ Chaque niveau charge ses propres images depuis un dossier dédié :
 
 ## 🎵 Musique de fond
 
-La musique de fond est désormais chargée depuis vos propres fichiers audio — un fichier par niveau. Placez simplement vos fichiers MP3 (ou OGG, WAV…) dans le dossier racine du projet avec ces noms exacts :
+La musique de fond est désormais chargée depuis mes propres fichiers audio — un fichier par niveau.
 
 | Fichier | Niveau |
 |---|---|
@@ -96,7 +96,7 @@ Les effets sonores sont générés en temps réel via la **Web Audio API** (aucu
 - ⭐ **Score** — nombre de paires trouvées
 - 🎯 **Coups** — nombre de retournements effectués
 - ⏱ **Temps** — chrono depuis le premier clic
-- 🏆 **Meilleur** — sauvegardé par niveau via `localStorage` (les valeurs aberrantes sont automatiquement supprimées au chargement)
+- 🏆 **Meilleur** — sauvegardé par niveau via `localStorage` 
 
 ---
 
@@ -116,26 +116,21 @@ Les effets sonores sont générés en temps réel via la **Web Audio API** (aucu
 
 ## 🚀 Lancer le projet
 
-1. Cloner ou télécharger le dossier
-2. Placer les images dans `images/`, `images1/`, `images2/`
-3. Placer vos fichiers audio (`music_easy.mp3`, `music_medium.mp3`, `music_hard.mp3`) à la racine
-4. Ouvrir `index.html` via **Live Server** (VS Code) ou tout serveur local
-
-> ⚠️ Un serveur local est requis pour charger les images et les fichiers audio (les navigateurs bloquent les ressources locales en mode `file://`).
-
----
+https://dhiyaa6.github.io/mohamed_dhiya_ben_nasser_memory_game/
 
 ## 📦 Historique des commits
 
-| Commit | Description |
-|---|---|
-| 1 | Structure HTML de base + plateau |
-| 2 | Logique JS : flip, match, timer, score |
-| 3 | Cartes spéciales + sons Web Audio |
-| 4 | Musique de fond + localStorage + responsive |
-| 5 | Design professionnel : glassmorphism, particules, 4 thèmes musicaux |
-| 6 | 🔍 Indice , images par niveau, layout sans scroll |
-| **7** ✅ | **Commit Final v3** — Musique de fond remplacée par fichiers MP3 personnalisés par niveau, correction meilleur score localStorage, sons d'effets conservés |
+| Hash      | Date         | Description                                                                 |
+|-----------|--------------|-----------------------------------------------------------------------------|
+| `3bd4e1b` | Apr 25, 2026 | Initial memory game                                                         |
+| `90e0add` | Apr 25, 2026 | Add README file                                                             |
+| `1034070` | Apr 25, 2026 | Update project link in README                                               |
+| `913ca2b` | Apr 25, 2026 | Enhance game with score, moves, flip animation and images instead of emojis |
+| `6acb2e9` | Apr 25, 2026 | Enhance README with detailed project information                            |
+| `811b25d` | Apr 28, 2026 | feat: custom background image, Web Audio sounds, title animations, reset button |
+| `a80cf04` | Apr 28, 2026 | feat: custom background image, Web Audio sounds, title animations, reset button |
+| `7025069` | Apr 28, 2026 | trigger rebuild                                                             |
+| **`c6857b9`** ✅ | **Apr 29, 2026** | **Final Version Project**                                       |
 
 ---
 
