@@ -1,4 +1,4 @@
-# 🃏 Jeu Memory — Commit Final
+# Jeu Memory — Commit Final
 
 > **Projet Web · PI2**
 > Auteur : **Mohamed Dhiya Ben Nasser**
@@ -6,13 +6,13 @@
 
 ---
 
-## 📋 Nom et description du projet
+## Nom et description du projet
 
 **Jeu Memory** est un jeu de mémoire interactif développé en HTML / CSS / JavaScript . Le joueur retourne des paires de cartes en un minimum de coups et de temps. Le projet intègre trois niveaux de difficulté, des cartes spéciales avec effets, une musique de fond personnalisée par niveau, des sons d'effets générés en temps réel, et un design professionnel de type glassmorphism.
 
 ---
 
-## 🗂️ Structure du projet
+## Structure du projet
 
 ```
 memory-game/
@@ -24,9 +24,9 @@ memory-game/
 │
 ├── background.png        # Image de fond
 │
-├── music_easy.mp3        # 🎵 Musique niveau Facile
-├── music_medium.mp3      # 🎵 Musique niveau Moyen
-├── music_hard.mp3        # 🎵 Musique niveau Difficile
+├── music_easy.mp3        #Musique niveau Facile
+├── music_medium.mp3      #Musique niveau Moyen
+├── music_hard.mp3        #Musique niveau Difficile
 │
 ├── images/               # Niveau Facile    → img1.png à img7.png
 ├── images1/              # Niveau Moyen     → img1.png à img12.png
@@ -35,26 +35,26 @@ memory-game/
 
 ---
 
-## 🎮 Niveaux de difficulté
+## Niveaux de difficulté
 
 | Niveau | Grille | Paires images | Spéciales | Total cartes |
 |---|---|---|---|---|
-| 😊 Facile | 4 × 5 | 7 | 3 | 20 |
-| 😐 Moyen | 5 × 6 | 12 | 3 | 30 |
-| 😈 Difficile | 6 × 7 | 18 | 3 | 42 |
+| Facile | 4 × 5 | 7 | 3 | 20 |
+| Moyen | 5 × 6 | 12 | 3 | 30 |
+| Difficile | 6 × 7 | 18 | 3 | 42 |
 
 ---
 
-## ✨ Fonctionnalités principales
+## Fonctionnalités principales
 
 - **3 niveaux de difficulté** — Facile, Moyen, Difficile avec grilles et images dédiées
 - **Cartes spéciales** avec effets uniques :
 
 | Carte | Effet |
 |---|---|
-| 🃏 Joker | Révèle toutes les cartes non trouvées pendant 2 secondes |
-| 🔍 Indice | Trouve et révèle une paire cachée pendant 1,8 secondes |
-| 🔀 Shuffle | Mélange toutes les cartes non encore trouvées |
+| Joker | Révèle toutes les cartes non trouvées pendant 2 secondes |
+| Indice | Trouve et révèle une paire cachée pendant 1,8 secondes |
+| Shuffle | Mélange toutes les cartes non encore trouvées |
 
 - **Musique de fond par niveau** — un fichier MP3 différent selon le niveau, démarre au premier clic et s'arrête à la victoire
 - **Sons d'effets Web Audio** — flip, match, erreur, carte spéciale, victoire, générés en temps réel sans fichier externe
@@ -62,11 +62,11 @@ memory-game/
 - **Layout sans scroll** — tout le jeu est visible sans défilement, cartes redimensionnées avec `min()`
 - **Particules animées** en arrière-plan
 - **Écran de victoire** animé avec récapitulatif de la partie
-- **Bouton mute** 🔊 / 🔇 pour couper le son à tout moment
+- **Bouton mute** pour couper le son à tout moment
 
 ---
 
-## 🖥️ Technologies utilisées
+## Technologies utilisées
 
 | Technologie | Usage |
 |---|---|
@@ -80,9 +80,9 @@ memory-game/
 
 ---
 
-## 🚀 Lancer le projet
+## Lancer le projet
 
-🔗 **Démo en ligne :** [https://dhiyaa6.github.io/mohamed_dhiya_ben_nasser_memory_game/](https://dhiyaa6.github.io/mohamed_dhiya_ben_nasser_memory_game/)
+ **Démo en ligne :** [https://dhiyaa6.github.io/mohamed_dhiya_ben_nasser_memory_game/](https://dhiyaa6.github.io/mohamed_dhiya_ben_nasser_memory_game/)
 
 Pour lancer en local :
 1. Cloner ou télécharger le dossier
@@ -90,11 +90,11 @@ Pour lancer en local :
 3. Placer les fichiers `music_easy.mp3`, `music_medium.mp3`, `music_hard.mp3` à la racine
 4. Ouvrir `index.html` via **Live Server** (VS Code) ou tout serveur local
 
-> ⚠️ Un serveur local est requis — les navigateurs bloquent les ressources locales en mode `file://`.
+> Un serveur local est requis — les navigateurs bloquent les ressources locales en mode `file://`.
 
 ---
 
-## 🌱 Nouveautés explorées
+##  Nouveautés explorées
 
 Durant ce projet, j'ai découvert et exploré plusieurs concepts nouveaux :
 
@@ -107,7 +107,7 @@ Durant ce projet, j'ai découvert et exploré plusieurs concepts nouveaux :
 
 ---
 
-## ⚠️ Difficultés rencontrées
+## Difficultés rencontrées
 
 1. **Compteur de coups incorrect au démarrage** — le jeu affichait 27 ou 31 coups dès le chargement sans avoir joué
 2. **Musique qui ne s'arrête pas** — la musique de fond continuait à jouer même après `stopBgMusic()`, notamment lors du changement de niveau ou de la victoire
@@ -117,29 +117,13 @@ Durant ce projet, j'ai découvert et exploré plusieurs concepts nouveaux :
 
 ---
 
-## ✅ Solutions apportées
+## Solutions apportées
 
 1. **Compteur de coups** — le bug venait de `buildBoard()` appelé deux fois à l'initialisation (une fois directement, une fois via `resetGame()`), ce qui corrompait l'état. Corrigé en remplaçant l'appel direct par `resetGame()` uniquement, et en ajoutant une garde dans `setDifficulty()` pour éviter un reset inutile
 2. **Musique** — le système `bgStopFlag` était insuffisant car les `setTimeout` déjà planifiés continuaient de s'exécuter. Remplacé par un système d'identifiant de boucle `bgLoopId` : chaque nouvelle boucle reçoit un ID unique, et toute boucle dont l'ID ne correspond plus à l'ID courant s'arrête immédiatement
 3. **Layout no-scroll** — redimensionnement des cartes avec `min(px, vw)`, passage à `flex: 1` pour le plateau, et `overflow: hidden` sur le body
 4. **Listeners** — remplacement de `addEventListener('click', flipCard)` par `card.onclick = flipCard`, qui écrase toujours le handler précédent et garantit un seul listener par carte
 5. **Cartes après Shuffle** — même correction `card.onclick = flipCard` appliquée dans `activateShuffle()` après reconstruction du HTML des cartes
-
----
-
-## 📦 Historique des commits
-
-| Hash | Date | Description |
-|---|---|---|
-| `3bd4e1b` | Apr 25, 2026 | Initial memory game |
-| `90e0add` | Apr 25, 2026 | Add README file |
-| `1034070` | Apr 25, 2026 | Update project link in README |
-| `913ca2b` | Apr 25, 2026 | Enhance game with score, moves, flip animation and images instead of emojis |
-| `6acb2e9` | Apr 25, 2026 | Enhance README with detailed project information |
-| `811b25d` | Apr 28, 2026 | feat: custom background image, Web Audio sounds, title animations, reset button |
-| `a80cf04` | Apr 28, 2026 | feat: custom background image, Web Audio sounds, title animations, reset button |
-| `7025069` | Apr 28, 2026 | trigger rebuild |
-| **`c6857b9`** ✅ | **Apr 29, 2026** | **Final Version Project** |
 
 ---
 
