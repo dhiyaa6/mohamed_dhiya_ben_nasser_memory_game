@@ -85,11 +85,6 @@ function soundWin() {
     setTimeout(()=>playTone(f,'sine',0.2,0.26), i*80)
   );
 }
-// ─── MUSIQUE DE FOND PAR NIVEAU (fichiers de votre choix) ───────────────────
-// Placez vos fichiers dans le même dossier que index.html :
-//   music_easy.mp3   → niveau Facile
-//   music_medium.mp3 → niveau Moyen
-//   music_hard.mp3   → niveau Difficile
 const LEVEL_MUSIC = {
   easy:   'music_easy.mp3',
   medium: 'music_medium.mp3',
